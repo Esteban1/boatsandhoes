@@ -1,0 +1,28 @@
+<xml>
+  <Tile>
+    <edge>
+      <seg feature="water"  id="1"/>
+      <seg feature="dock"   id="1"/>
+      <seg feature="water"  id="2"/>
+    </edge>
+    <edge>
+      <seg feature="water" id="2"/>
+      <seg feature="water" id="2"/>
+      <seg feature="water" id="2"/>
+    <edge>
+      <seg feature="water" id="2"/>
+      <seg feature="water" id="2"/>
+      <seg feature="water" id="2"/>
+    </edge>
+    <edge>
+      <seg feature="island" id="1"/>
+      <seg feature="island" id="1"/>
+      <seg feature="island" id="1"/>
+    </edge>
+    <placementPoint x="10" y="5" feature="water" id="1" />
+    <placementPoint x="25" y="5" feature="dock" id="1"/>
+    <placementPoint x="50" y="25" feature="water" id="2"/>
+    <placementPoint x="5" y="25" feature="island" id="1"/>
+    <texture name="cityWalls.jpg" />
+  </Tile>
+</xml>
