@@ -36,6 +36,11 @@ namespace Game
 			m_occupied = false;
 		}
 
+		// Copy feature segment
+		public FeatureSegment(FeatureSegment seg) : this(seg.m_id, seg.m_type, seg.m_placementPos)
+		{
+		}
+
 		public int GetId()
 		{
 			return m_id;

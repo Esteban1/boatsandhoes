@@ -32,6 +32,24 @@ namespace Game
 			}
 		}
 
+		// Copy tile with unique id
+		public Tile(int id, Tile tile) : this(id, tile.m_textureName)
+		{
+			// must create feature segments before creating edges since
+			// edges point to feature segments
+			foreach(FeatureSegment seg in tile.m_featureSegments)
+			{
+				FeatureSegment newSeg = new FeatureSegment(seg);
+				m_featureSegments.Add(newSeg);
+			}
+
+			for(int i = 0; i < m_edges.Capacity; ++i)
+			{
+				Edge newEdge = new Edge(this, tile.m_edges[i]);
+				m_edges[i] = newEdge;
+			}
+		}
+
 		// Update is called once per frame
 		void Update()
 		{

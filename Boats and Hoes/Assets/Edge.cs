@@ -42,6 +42,19 @@ namespace Game
 			}
 		}
 
+		// Copy edge with different parent tile
+		public Edge(Tile parentTile, Edge edge) : this(parentTile, edge.m_type)
+		{
+			for(int i = 0; i < m_segments.Capacity; ++i)
+			{
+				FeatureSegment seg = parentTile.GetFeatureSegment(edge.m_segments[i].GetId());
+				if(seg != null)
+				{
+					m_segments[i] = seg;
+				}
+			}
+		}
+
 		public EdgeType GetEdgeType()
 		{
 			return m_type;

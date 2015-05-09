@@ -21,11 +21,13 @@ namespace Game
 		Queue<Tile> m_unusedTiles;
 		List<Tile> m_placedTiles;
 		List<Tile> m_openSpaceTiles;
+		Dictionary<string, int> m_tileCounts;
 
 		public TileManager()
 		{
 			XmlDocument xml = XMLReader.Read("Assets/metadata/Tiles");
 			int tileID = 0;
+
 			// Tiles
 			foreach (XmlNode tileNode in xml.DocumentElement.ChildNodes)
 			{
@@ -33,6 +35,7 @@ namespace Game
 				int numCopies = int.Parse(tileNode.Attributes["count"].InnerText);
 				int edgeCount = 0;
 
+				m_tileCounts.Add(texture, numCopies);
 				Tile newTile = new Tile(tileID, texture);
 
 				foreach (XmlNode childNode in tileNode.ChildNodes)
@@ -100,6 +103,12 @@ namespace Game
 
 				// Debug
 				newTile.PrintInfo();
+
+				// Make copies
+				for(int i = 0; i < (numCopies - 1); i++)
+				{
+					m_gameTiles.Add(new Tile(tileID++, newTile));
+				}
 			}
 		}
 
