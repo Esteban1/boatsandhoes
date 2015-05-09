@@ -10,10 +10,15 @@
 using System;
 namespace Game
 {
-	public class Side
+	public class Segment
 	{
-		public Side ()
+		Feature m_feature;
+		int m_id;
+
+		public Segment (Feature.FeatureType featureType, int id)
 		{
+			m_feature = new Feature(featureType);
+			m_id = id;
 		}
 	}
 }

@@ -48,10 +48,11 @@
   <ItemGroup>
      <Compile Include="Assets\Edge.cs" />
      <Compile Include="Assets\Feature.cs" />
-     <Compile Include="Assets\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Main.cs" />
      <Compile Include="Assets\Seg.cs" />
-     <Compile Include="Assets\Side.cs" />
+     <Compile Include="Assets\Segment.cs" />
      <Compile Include="Assets\Tile.cs" />
+     <Compile Include="Assets\TileManager.cs" />
      <Compile Include="Assets\XMLReader.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
