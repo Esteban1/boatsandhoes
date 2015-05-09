@@ -48,6 +48,12 @@ namespace Game
 						int y = int.Parse(childNode.Attributes["y"].InnerText);
 
 						FeatureSegment featSeg = new FeatureSegment(id, type, new Vector2(x,y));
+						if(childNode.Attributes["multiplier"] != null)
+						{
+							int multiplier = int.Parse(childNode.Attributes["multiplier"].InnerText);
+							featSeg.SetMultiplier(multiplier);
+						}
+
 						newTile.AddFeatureSegment(featSeg);
 					}
 					else if (childNode.Name == "edge")

@@ -15,6 +15,7 @@ namespace Game
 	public class FeatureSegment
 	{
 		int m_id;
+		int m_multiplier;
 		FeatureType m_type;
 		Vector2 m_placementPos;
 		bool m_occupied;
@@ -31,6 +32,7 @@ namespace Game
 		public FeatureSegment (int id, FeatureType type, Vector2 pos)
 		{
 			m_id = id;
+			m_multiplier = 1;
 			m_type = type;
 			m_placementPos = pos;
 			m_occupied = false;
@@ -39,11 +41,22 @@ namespace Game
 		// Copy feature segment
 		public FeatureSegment(FeatureSegment seg) : this(seg.m_id, seg.m_type, seg.m_placementPos)
 		{
+			m_multiplier = seg.m_multiplier;
 		}
 
 		public int GetId()
 		{
 			return m_id;
+		}
+
+		public int GetMultiplier()
+		{
+			return m_multiplier;
+		}
+
+		public void SetMultiplier(int mult)
+		{
+			m_multiplier = mult;
 		}
 
 		public void SetOccupied(bool occupied)
