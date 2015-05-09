@@ -29,8 +29,11 @@ namespace Game
 			// Tiles
 			foreach (XmlNode tileNode in xml.DocumentElement.ChildNodes)
 			{
-				Tile newTile = new Tile(tileID);
+				string texture = tileNode.Attributes["texture"].InnerText;
+				int numCopies = int.Parse(tileNode.Attributes["count"].InnerText);
 				int edgeCount = 0;
+
+				Tile newTile = new Tile(tileID, texture);
 
 				foreach (XmlNode childNode in tileNode.ChildNodes)
 				{
@@ -82,10 +85,6 @@ namespace Game
 
 						newTile.SetEdge(newEdge.GetEdgeType(), newEdge);
 						edgeCount++;
-					}
-					else if (childNode.Name == "texture")
-					{
-						newTile.SetTexture(childNode.Attributes["name"].InnerText);
 					}
 				}
 

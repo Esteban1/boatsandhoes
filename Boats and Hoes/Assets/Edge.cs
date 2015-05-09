@@ -28,7 +28,7 @@ namespace Game
 			BOTTOM,
 			LEFT,
 			MAX_EDGES
-		}
+		} 
 
 		public Edge(Tile parentTile, EdgeType type)
 		{

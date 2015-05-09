@@ -14,14 +14,14 @@ namespace Game
 		string m_textureName;
 		Vector2 m_position;
 
-		public Tile() : this (-1)
+		public Tile() : this (-1, "")
 		{
 		}
 
-		public Tile(int id)
+		public Tile(int id, string texture)
 		{
 			m_id = id;
-			m_textureName = "";
+			m_textureName = texture;
 			m_position = new Vector2();
 			m_featureSegments  = new List<FeatureSegment>();
 
