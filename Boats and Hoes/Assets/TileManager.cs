@@ -25,6 +25,12 @@ namespace Game
 
 		public TileManager()
 		{
+			m_gameTiles = new List<Tile>();
+			m_unusedTiles = new Queue<Tile>();
+			m_placedTiles = new List<Tile>();
+			m_openSpaceTiles = new List<Tile>();
+			m_tileCounts = new Dictionary<string,int>();
+
 			XmlDocument xml = XMLReader.Read("Assets/metadata/Tiles");
 			int tileID = 0;
 
