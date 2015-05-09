@@ -1,0 +1,613 @@
+<xml>
+  <Tile count="4" texture="tileD.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="3" type="WATER" x="1" y="1"/>
+  	<featureSegment id="4" type="ISLAND" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="2"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="4"/>
+      <section featureId="4"/>
+      <section featureId="4"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="2"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="2" texture="tileA.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="LIGHTHOUSE" x="1" y="1"/>
+  	<featureSegment id="3" type="DOCK" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="3"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="4" texture="tileB.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="LIGHTHOUSE" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="1" texture="tileC.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1" multiplier="2"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="5" texture="tileE.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+  </Tile>
+  <Tile count="2" texture="tileF.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="ISLAND" x="1" y="1" multiplier="2"/>
+  	<featureSegment id="3" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="3"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+  </Tile>
+  <Tile count="1" texture="tileG.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<featureSegment id="3" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="3"/>
+      <section featureId="3"/>
+    </edge>
+  </Tile>
+  <Tile count="3" texture="tileH.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="ISLAND" x="1" y="1"/>
+  	<featureSegment id="3" type="ISLAND" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="3"/>
+      <section featureId="3"/>
+    </edge>
+  </Tile>
+  <Tile count="2" texture="tileI.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="ISLAND" x="1" y="1"/>
+  	<featureSegment id="3" type="ISLAND" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="3"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="3" texture="tileJ.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<featureSegment id="3" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="4" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="3"/>
+      <section featureId="4"/>
+    </edge>
+    <edge>
+      <section featureId="4"/>
+      <section featureId="3"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+  </Tile>
+  <Tile count="3" texture="tileK.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="3" type="WATER" x="1" y="1"/>
+  	<featureSegment id="4" type="ISLAND" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="2"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="4"/>
+      <section featureId="4"/>
+      <section featureId="4"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="3"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="2"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="3" texture="tileL.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="3" type="WATER" x="1" y="1"/>
+  	<featureSegment id="4" type="ISLAND" x="1" y="1"/>
+  	<featureSegment id="5" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="6" type="WATER" x="1" y="1"/>
+  	<featureSegment id="7" type="DOCK" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="2"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="4"/>
+      <section featureId="4"/>
+      <section featureId="4"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="5"/>
+      <section featureId="6"/>
+    </edge>
+    <edge>
+      <section featureId="6"/>
+      <section featureId="7"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="2" texture="tileM.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1" multiplier="2"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="3" texture="tileN.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="2" texture="tileO.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1" multiplier="2"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<featureSegment id="3" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="4" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="3"/>
+      <section featureId="4"/>
+    </edge>
+    <edge>
+      <section featureId="4"/>
+      <section featureId="3"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="3" texture="tileP.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<featureSegment id="3" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="4" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="3"/>
+      <section featureId="4"/>
+    </edge>
+    <edge>
+      <section featureId="4"/>
+      <section featureId="3"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="1" texture="tileQ.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1" multiplier="2"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="3" texture="tileR.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="2"/>
+      <section featureId="2"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="2" texture="tileS.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1" multiplier="2"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<featureSegment id="3" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="4" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="3"/>
+      <section featureId="4"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="1" texture="tileT.png">
+  	<featureSegment id="1" type="ISLAND" x="1" y="1"/>
+  	<featureSegment id="2" type="WATER" x="1" y="1"/>
+  	<featureSegment id="3" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="4" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="2"/>
+      <section featureId="3"/>
+      <section featureId="4"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="8" texture="tileU.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="3" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="2"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="3"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="2"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="9" texture="tileV.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="3" type="WATER" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="2"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="2"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="4" texture="tileW.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="3" type="WATER" x="1" y="1"/>
+  	<featureSegment id="4" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="5" type="WATER" x="1" y="1"/>
+  	<featureSegment id="6" type="DOCK" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="1"/>
+      <section featureId="1"/>
+    </edge>
+    <edge>
+      <section featureId="1"/>
+      <section featureId="2"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="4"/>
+      <section featureId="5"/>
+    </edge>
+    <edge>
+      <section featureId="5"/>
+      <section featureId="6"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+  <Tile count="1" texture="tileX.png">
+  	<featureSegment id="1" type="WATER" x="1" y="1"/>
+  	<featureSegment id="2" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="3" type="WATER" x="1" y="1"/>
+  	<featureSegment id="4" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="5" type="WATER" x="1" y="1"/>
+  	<featureSegment id="6" type="DOCK" x="1" y="1"/>
+  	<featureSegment id="7" type="WATER" x="1" y="1"/>
+  	<featureSegment id="8" type="DOCK" x="1" y="1"/>
+  	<edge>
+      <section featureId="1"/>
+      <section featureId="2"/>
+      <section featureId="3"/>
+    </edge>
+    <edge>
+      <section featureId="3"/>
+      <section featureId="4"/>
+      <section featureId="5"/>
+    </edge>
+    <edge>
+      <section featureId="5"/>
+      <section featureId="6"/>
+      <section featureId="7"/>
+    </edge>
+    <edge>
+      <section featureId="7"/>
+      <section featureId="8"/>
+      <section featureId="1"/>
+    </edge>
+  </Tile>
+</xml>

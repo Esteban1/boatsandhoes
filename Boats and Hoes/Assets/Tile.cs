@@ -6,13 +6,15 @@ using Game;
 
 namespace Game
 {
-	public class Tile
+	public class Tile : UnityEngine.Object
 	{
+		static readonly string TEXTURE_PATH = "Assets/Resources/metadata/";
 		List<Edge> m_edges;
 		List<FeatureSegment> m_featureSegments;
 		int m_id;
 		string m_textureName;
 		Vector2 m_position;
+		GameObject gameObj;
 
 		public Tile() : this (-1, "")
 		{
@@ -20,8 +22,10 @@ namespace Game
 
 		public Tile(int id, string texture)
 		{
+			gameObj = (GameObject)Instantiate(Resources.Load("Tile", typeof(GameObject)));
+
 			m_id = id;
-			m_textureName = texture;
+			SetTexture(texture);
 			m_position = new Vector2();
 			m_featureSegments  = new List<FeatureSegment>();
 
@@ -77,6 +81,18 @@ namespace Game
 		public void SetTexture(string texture)
 		{
 			m_textureName = texture;
+			LoadTexture();
+		}
+
+		private void LoadTexture()
+		{
+			if (m_textureName != "" && gameObj != null)
+			{
+				SpriteRenderer myRenderer = gameObj.GetComponent<SpriteRenderer>();
+				Texture2D newTexture = Resources.LoadAssetAtPath(TEXTURE_PATH + m_textureName, typeof(Texture2D)) as Texture2D;
+				Sprite newSprite = Sprite.Create(newTexture, new Rect(0, 0, 128, 128), new Vector2());
+				myRenderer.sprite = newSprite;
+			}
 		}
 
 		public void AddFeatureSegment(FeatureSegment newSeg)

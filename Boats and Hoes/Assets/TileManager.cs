@@ -16,6 +16,8 @@ namespace Game
 {
 	public class TileManager
 	{
+		static readonly string ASSET_FILE_NAME = "Assets/Resources/metadata/Tiles";
+
 		Tile m_startingTile;
 		List<Tile> m_gameTiles;
 		Queue<Tile> m_unusedTiles;
@@ -25,13 +27,14 @@ namespace Game
 
 		public TileManager()
 		{
+
 			m_gameTiles = new List<Tile>();
 			m_unusedTiles = new Queue<Tile>();
 			m_placedTiles = new List<Tile>();
 			m_openSpaceTiles = new List<Tile>();
 			m_tileCounts = new Dictionary<string,int>();
+			XmlDocument xml = XMLReader.Read(ASSET_FILE_NAME);
 
-			XmlDocument xml = XMLReader.Read("Assets/metadata/Tiles");
 			int tileID = 0;
 
 			// Tiles
@@ -41,7 +44,7 @@ namespace Game
 				int numCopies = int.Parse(tileNode.Attributes["count"].InnerText);
 				int edgeCount = 0;
 
-				m_tileCounts.Add(texture, numCopies);
+				m_tileCounts[texture] = numCopies;
 				Tile newTile = new Tile(tileID, texture);
 
 				foreach (XmlNode childNode in tileNode.ChildNodes)
