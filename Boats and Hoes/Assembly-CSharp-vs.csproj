@@ -47,10 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Edge.cs" />
-     <Compile Include="Assets\Feature.cs" />
+     <Compile Include="Assets\FeatureSegment.cs" />
      <Compile Include="Assets\Main.cs" />
-     <Compile Include="Assets\Seg.cs" />
-     <Compile Include="Assets\Segment.cs" />
      <Compile Include="Assets\Tile.cs" />
      <Compile Include="Assets\TileManager.cs" />
      <Compile Include="Assets\XMLReader.cs" />
@@ -63,6 +61,7 @@
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\metadata\Tiles.xml" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />

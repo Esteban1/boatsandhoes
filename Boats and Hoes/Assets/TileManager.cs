@@ -24,39 +24,66 @@ namespace Game
 
 		public TileManager()
 		{
-			XmlDocument xml = XMLReader.Read("Tiles");
+			XmlDocument xml = XMLReader.Read("Assets/metadata/Tiles");
 			int tileID = 0;
 			// Tiles
 			foreach (XmlNode tileNode in xml.DocumentElement.ChildNodes)
 			{
 				Tile newTile = new Tile(tileID);
-				uint edgeCount = 0;
+				int edgeCount = 0;
 
 				foreach (XmlNode childNode in tileNode.ChildNodes)
 				{
-					if (childNode.Name == "edge")
+					if(childNode.Name == "featureSegment")
 					{
-						if (edgeCount >= (uint)Edge.EdgeType.MAX_EDGES)
+						int id = int.Parse(childNode.Attributes["id"].InnerText);
+						FeatureSegment.FeatureType type = (FeatureSegment.FeatureType)Enum.Parse(typeof(FeatureSegment.FeatureType), childNode.Attributes["type"].InnerText);
+						int x = int.Parse(childNode.Attributes["x"].InnerText);
+						int y = int.Parse(childNode.Attributes["y"].InnerText);
+
+						FeatureSegment featSeg = new FeatureSegment(id, type, new Vector2(x,y));
+						newTile.AddFeatureSegment(featSeg);
+					}
+					else if (childNode.Name == "edge")
+					{
+						if (edgeCount >= (int)Edge.EdgeType.MAX_EDGES)
 						{
-							Console.Error.WriteLine("Too many edges defined for tile %d in xml", tileID);
+							Debug.LogError("TileManager.TileManager - Too many edges defined for tile " + tileID);
 							break;
 						}
 
 						Edge newEdge = new Edge(newTile, (Edge.EdgeType)edgeCount);
 
-						int segIdx = 0;
-						foreach (XmlNode segNode in childNode)
+						int sectionCount = 0;
+						foreach (XmlNode sectionNode in childNode)
 						{
-							Feature.FeatureType featureType = (Feature.FeatureType)Enum.Parse(typeof(Feature.FeatureType), segNode.Attributes["feature"].InnerText);
-							int featureID = int.Parse(segNode.Attributes["id"].InnerText);
-							Segment seg = new Segment(featureType, featureID);
-							newEdge.SetSegment(segIdx++, seg);
+							if(sectionNode.Name != "section")
+							{
+								Debug.LogError("TileManager.TileManager - Expecting node named 'section' for edge " + edgeCount + " of tile " + tileID + " but got node named ' " + sectionNode.Name + "'");
+								break;
+							}
+
+							if(sectionCount >= Edge.NUM_SEGMENTS)
+							{
+								Debug.LogError("TileManager.TileManager - Too many sections for edge " + edgeCount + " of tile " + tileID);
+								break;
+							}
+
+							int featureID = int.Parse(sectionNode.Attributes["featureId"].InnerText);
+							FeatureSegment seg = newTile.GetFeatureSegment(featureID);
+							if(seg == null)
+							{
+								Debug.LogError("TileManager.TileManager - Could not find feature segment with id " + featureID + " for section " + sectionCount + " of edge " + edgeCount + " of tile " + tileID);
+								break;
+							}
+
+							newEdge.SetFeatureSegment(sectionCount++, seg);
 						}
+
 						newTile.SetEdge(newEdge.GetEdgeType(), newEdge);
 						edgeCount++;
-					} else if (childNode.Name == "placementPoint")
-					{
-					} else if (childNode.Name == "texture")
+					}
+					else if (childNode.Name == "texture")
 					{
 						newTile.SetTexture(childNode.Attributes["name"].InnerText);
 					}
@@ -65,11 +92,15 @@ namespace Game
 				if (tileID == 0)
 				{
 					m_startingTile = newTile;
-				} else
+				}
+				else
 				{
 					m_gameTiles.Add(newTile);
 				}
 				tileID++;
+
+				// Debug
+				newTile.PrintInfo();
 			}
 		}
 

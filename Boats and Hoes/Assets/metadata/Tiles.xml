@@ -1,28 +1,29 @@
 <xml>
   <Tile>
+  	<featureSegment id="1" type="WATER"  x="10" y="5"/>
+    <featureSegment id="2" type="DOCK"   x="25" y="5"/>
+    <featureSegment id="3" type="WATER"  x="50" y="25"/>
+    <featureSegment id="4" type="ISLAND" x="5"  y="25"/>
     <edge>
-      <seg feature="water"  id="1"/>
-      <seg feature="dock"   id="1"/>
-      <seg feature="water"  id="2"/>
+      <section featureId="1"/>
+      <section featureId="2"/>
+      <section featureId="3"/>
     </edge>
     <edge>
-      <seg feature="water" id="2"/>
-      <seg feature="water" id="2"/>
-      <seg feature="water" id="2"/>
-    <edge>
-      <seg feature="water" id="2"/>
-      <seg feature="water" id="2"/>
-      <seg feature="water" id="2"/>
+      <section featureId="3"/>
+      <section featureId="3"/>
+      <section featureId="3"/>
     </edge>
     <edge>
-      <seg feature="island" id="1"/>
-      <seg feature="island" id="1"/>
-      <seg feature="island" id="1"/>
+      <section featureId="3"/>
+      <section featureId="3"/>
+      <section featureId="3"/>
     </edge>
-    <placementPoint x="10" y="5" feature="water" id="1" />
-    <placementPoint x="25" y="5" feature="dock" id="1"/>
-    <placementPoint x="50" y="25" feature="water" id="2"/>
-    <placementPoint x="5" y="25" feature="island" id="1"/>
+    <edge>
+      <section featureId="4"/>
+      <section featureId="4"/>
+      <section featureId="4"/>
+    </edge>
     <texture name="cityWalls.jpg" />
   </Tile>
 </xml>

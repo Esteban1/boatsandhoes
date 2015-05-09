@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Game;
@@ -8,6 +9,7 @@ namespace Game
 	public class Tile
 	{
 		List<Edge> m_edges;
+		List<FeatureSegment> m_featureSegments;
 		int m_id;
 		string m_textureName;
 		Vector2 m_position;
@@ -16,17 +18,37 @@ namespace Game
 		{
 		}
 
-		public Tile(int id) : 
-			this(new List<Edge> ((int)(Edge.EdgeType.MAX_EDGES)), id)
+		public Tile(int id)
 		{
-		}
-
-		public Tile(List<Edge> edges, int id)
-		{
-			m_edges = edges;
 			m_id = id;
 			m_textureName = "";
 			m_position = new Vector2();
+			m_featureSegments  = new List<FeatureSegment>();
+
+			m_edges = new List<Edge>((int)Edge.EdgeType.MAX_EDGES);
+			for(int i = 0; i < m_edges.Capacity; i++)
+			{
+				m_edges.Add(null);
+			}
+		}
+
+		// Update is called once per frame
+		void Update()
+		{
+			
+		}
+
+		public FeatureSegment GetFeatureSegment(int id)
+		{
+			foreach(FeatureSegment seg in m_featureSegments)
+			{
+				if(seg.GetId() == id)
+				{
+					return seg;
+				}
+			}
+
+			return null;
 		}
 
 		public void SetEdge(Edge.EdgeType type, Edge Edge)
@@ -39,23 +61,22 @@ namespace Game
 			m_textureName = texture;
 		}
 
-		// Update is called once per frame
-		void Update()
+		public void AddFeatureSegment(FeatureSegment newSeg)
 		{
-		
+			m_featureSegments.Add(newSeg);
 		}
 
-		List<Edge> FindMatchingEdges(Tile other)
+		public void PrintInfo()
 		{
-			List<Edge> matches = new List<Edge>();
-
-			return matches;
-		}
-
-		bool DoesEdgeMatch(Edge edge)
-		{
-			bool bMatches = true;
-			return bMatches;
+			Debug.Log("Tile id - " + m_id + ", texture - " + m_textureName);
+			foreach(FeatureSegment seg in m_featureSegments)
+			{
+				seg.PrintInfo();
+			}
+			foreach(Edge edge in m_edges)
+			{
+				edge.PrintInfo();
+			}
 		}
 	}
 }

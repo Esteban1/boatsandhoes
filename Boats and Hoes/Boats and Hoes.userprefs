@@ -1,14 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TileManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/metadata/Tiles.xml">
     <Files>
-      <File FileName="Assets/Tile.cs" Line="33" Column="4" />
-      <File FileName="Assets/Edge.cs" Line="40" Column="4" />
+      <File FileName="Assets/Tile.cs" Line="36" Column="16" />
+      <File FileName="Assets/Edge.cs" Line="42" Column="5" />
       <File FileName="Assets/XMLReader.cs" Line="14" Column="2" />
-      <File FileName="Assets/Segment.cs" Line="1" Column="1" />
-      <File FileName="Assets/Feature.cs" Line="11" Column="15" />
+      <File FileName="Assets/FeatureSegment.cs" Line="45" Column="4" />
       <File FileName="Assets/Main.cs" Line="13" Column="4" />
-      <File FileName="Assets/TileManager.cs" Line="57" Column="9" />
+      <File FileName="Assets/TileManager.cs" Line="102" Column="13" />
+      <File FileName="Assets/metadata/Tiles.xml" Line="8" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
