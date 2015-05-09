@@ -5,35 +5,42 @@ using Game;
 
 namespace Game
 {
-	public class Tile 
+	public class Tile
 	{
 		List<Edge> m_edges;
 		int m_id;
 		string m_textureName;
+		Vector2 m_position;
 
-		public Tile () : this (-1, "")
+		public Tile() : this (-1)
 		{
 		}
 
-		public Tile(int id, string textureName) : 
-			this(new List<Edge> ((int)(Edge.EdgeType.MAX_EDGES-1)), id, textureName)
+		public Tile(int id) : 
+			this(new List<Edge> ((int)(Edge.EdgeType.MAX_EDGES)), id)
 		{
 		}
 
-		public Tile(List<Edge> edges, int id, string textureName)
+		public Tile(List<Edge> edges, int id)
 		{
 			m_edges = edges;
 			m_id = id;
-			m_textureName = textureName;
+			m_textureName = "";
+			m_position = new Vector2();
 		}
 
-		void SetEdge(Edge.EdgeType type, Edge Edge)
+		public void SetEdge(Edge.EdgeType type, Edge Edge)
 		{
-			m_edges [(int)type] = Edge;
+			m_edges[(int)type] = Edge;
+		}
+
+		public void SetTexture(string texture)
+		{
+			m_textureName = texture;
 		}
 
 		// Update is called once per frame
-		void Update () 
+		void Update()
 		{
 		
 		}

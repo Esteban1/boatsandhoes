@@ -15,7 +15,7 @@ namespace Game
 		Feature m_feature;
 		int m_id;
 
-		public Segment (Feature.FeatureType featureType, int id)
+		public Segment(Feature.FeatureType featureType, int id)
 		{
 			m_feature = new Feature(featureType);
 			m_id = id;

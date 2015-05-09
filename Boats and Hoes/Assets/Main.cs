@@ -4,16 +4,16 @@ using Game;
 
 namespace Game
 {
-	public class Main : MonoBehaviour 
+	public class Main : MonoBehaviour
 	{
 		// Use this for initialization
-		void Start () 
+		void Start()
 		{
-			new TileManager ();
+			new TileManager();
 		}
 		
 		// Update is called once per frame
-		void Update () 
+		void Update()
 		{
 		
 		}

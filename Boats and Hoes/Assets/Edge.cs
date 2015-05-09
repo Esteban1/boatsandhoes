@@ -14,25 +14,34 @@ namespace Game
 {
 	public class Edge
 	{
+		readonly Tile m_parentTile;
+		List <Segment> m_segments;
+		EdgeType m_type;
+
 		public enum EdgeType
 		{
 			EDGE_TOP,
 			EDGE_RIGHT,
 			EDGE_BOTTOM,
 			EDGE_LEFT,
-			MAX_EDGES
+			MAX_EDGES = EDGE_LEFT
 		}
 
-		List<Segment> segs;
-
-		public Edge ()
+		public Edge(Tile parentTile, EdgeType type)
 		{
-			segs = new List<Segment> (3);
+			m_parentTile = parentTile;
+			m_type = type;
+			m_segments = new List<Segment>(3);
 		}
 
 		public void SetSegment(int segIdx, Segment seg)
 		{
-			segs [segIdx] = seg;
+			m_segments[segIdx] = seg;
+		}
+
+		public EdgeType GetEdgeType()
+		{
+			return m_type;
 		}
 	}
 }

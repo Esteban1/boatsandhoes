@@ -17,7 +17,7 @@ namespace Game
 		public static XmlDocument Read(string fileName)
 		{
 			XmlDocument doc = new XmlDocument();
-			doc.Load(fileName+".xml");
+			doc.Load(fileName + ".xml");
 			return doc;
 		}
 	}
